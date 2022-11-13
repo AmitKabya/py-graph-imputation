@@ -28,7 +28,7 @@
 
 from setuptools import setup
 from Cython.Build import cythonize
-# import numpy
+import numpy as np
 
 
       # include_dirs=[numpy.get_include()],
@@ -83,5 +83,6 @@ setup(
     tests_require=test_requirements,
     url="https://github.com/nmdp-bioinformatics/py-grim",
     zip_safe=False,
-    ext_modules=cythonize([Extension("cutils", ["grim/imputation/imputegl/cutils.pyx"])], language_level="3")
+    ext_modules=cythonize([Extension("cutils", ["grim/imputation/imputegl/cutils.pyx"])], language_level="3"),
+    include_dirs=np.get_include()
 )
