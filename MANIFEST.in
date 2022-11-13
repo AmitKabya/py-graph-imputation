@@ -3,6 +3,7 @@ include README.md
 include LICENSE
 include *.txt
 include *.pyd
+include grim/imputation/imputegl/*.pyd
 recursive-include grim *.py
 recursive-include grim *.txt
 recursive-include grim *.json
